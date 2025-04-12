@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        .navbar h1 {
+            margin: 0;
+        }
+
+        .nav-options {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-options li {
+            margin-right: 20px;
+        }
+
+        .profile-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .profile-info {
+            text-align: left;
+        }
+
+        .profile-info h2, .profile-info p {
+            margin: 0;
+        }
+
+        .profile-info input {
+            border: none;
+            background: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border: 2px solid #333;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-photo input[type="file"] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .card {
+            flex: 1;
+            padding: 20px;
+            background-color: #f4f4f4;
+            margin-right: 10px;
+            text-align: center;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+        }
+
+        .card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .action-buttons {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .action-buttons button {
+            margin-right: 10px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="/gg.jpg" alt="">
+        <ul class="nav-options">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">New</a></li>
+            <li><a href="#">Notifications</a></li>
+        </ul>
+    </div>
+
+    <div class="profile-container">
+        <div class="profile-info">
+            <label for="name">Name:</label>
+            <input type="text" id="name" value="John Doe" placeholder="Name">
+            <label for="position">Position:</label>
+            <input type="text" id="position" value="Student" placeholder="Position">
+            <label for="club">Club Name:</label>
+            <input type="text" id="club" value="Computer Science Club" placeholder="Club Name">
+        </div>
+        <div class="profile-photo">
+            <img id="profile-image" src="default-profile.jpg" alt="Profile Photo">
+            <input type="file" accept="image/*" onchange="loadImage(this)" />
+        </div>
+    </div>
+
+    <div class="cards">
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+    </div>
+
+    <div class="action-buttons">
+        <button>Logout</button>
+    </div>
+
+    <script>
+        function loadImage(input) {
+            const profileImage = document.getElementById('profile-image');
+            const file = input.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    profileImage.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile page</title>
+    <link rel="stylesheet" href="adhome.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand" href="#">Student System Club / Admin</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="Homepage.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+        </ul>
+        <span class="navbar-text">
+          Admin Page
+        </span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Profile Section -->
+  <main class="container mt-4">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="profile-info">
+          <img src="billu.jpg" alt="Admin Photo" class="img-fluid">
+          <h2>Bill Gates</h2>
+          <p>Club Name: Coding Club</p>
+          <p>Position: Head</p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="menu">
+          <ul class="list-group">
+            <li class="list-group-item bg-primary">
+              <button type="button" class="btn btn-primary w-100">
+                Profile
+                <span class="badge badge-danger float-end">New</span>
+              </button>
+            </li>
+            <li class="list-group-item">
+              <button type="button" class="btn btn-primary w-100">
+                Notifications <span class="badge badge-secondary">4</span>
+              </button>
+            </li>
+            <li class="list-group-item">
+              <button type="button" class="btn btn-primary w-100">
+                Inbox
+                <span class="badge badge-danger float-end">99+</span>
+              </button>
+            </li>
+            <li class="list-group-item">
+              <button type="button" class="btn btn-primary w-100">
+                Log out
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Card Section -->
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <img src="plant.jpg" class="card-img-top" alt="Plantation">
+          <div class="card-body">
+            <h5 class="card-title">Plantation</h5>
+            <p class="card-text">In our campus, we're planting 100 plants in the garden.</p>
+            <a href="#" class="btn btn-primary">Take Action</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <img src="coding.jpg" class="card-img-top" alt="Coding Competition">
+          <div class="card-body">
+            <h5 class="card-title">Coding Competition</h5>
+            <p class="card-text">Join our coding competition and show your skills.</p>
+            <a href="#" class="btn btn-primary">Take Action</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <img src="price.jpg" class="card-img-top" alt="Price Distribution">
+          <div class="card-body">
+            <h5 class="card-title">Price Distribution</h5>
+            <p class="card-text">Get information about the upcoming prize distribution event.</p>
+            <a href="#" class="btn btn-primary">Information</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

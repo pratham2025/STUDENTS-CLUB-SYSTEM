@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <title>Admin Registration</title>
+</head>
+<body>
+    <header>
+        <h1> Registration</h1>
+    </header>
+    <main>
+        <form id="registration-form" action="process_registration.php" method="POST">
+            <div class="form-section">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="unique-id">Unique ID:</label>
+                <input type="text" id="unique-id" name="unique_id" required>
+                
+                <label for="branch">Branch:</label>
+                <input type="text" id="branch" name="branch" required>
+                
+                <label for="year">Year:</label>
+                <input type="number" id="year" name="year" min="1" max="5" required>
+                
+                <label for="division">Division:</label>
+                <input type="text" id="division" name="division" required>
+            </div>
+            
+            <div class="form-section">
+                <label for="designation">Designation:</label>
+                <input type="text" id="designation" name="designation" required>
+                
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+                
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" name="email" required>
+              
+            </div>
+            
+            <div class="form-section">
+                <label for="club-position">Club Position:</label>
+                <select id="club-position" name="club_position" required>
+                    <option value="" disabled selected>Select Club Position</option>
+                    <option value="head">Head of Club</option>
+                    <option value="ambassador">Ambassador</option>
+                    <option value="coordinator">Coordinator</option>
+                    <option value="media">Media Manager</option>
+                </select>
+                
+                <label for="club-name">Club Name:</label>
+                <select id="club-name" name="club_name" required>
+                    <option value="" disabled selected>Select Club Name</option>
+                    <option value="coding">Coding Club</option>
+                    <option value="cultural">Cultural Club</option>
+                    <option value="tp">T&P Club</option>
+                    <option value="google-dev">Google Developer Club</option>
+                    <option value="sport">Sport Club</option>
+                </select>
+                
+                <label for="user-id">User ID:</label>
+                <input type="text" id="user-id" name="user_id" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <a href="adhome.html"><button type="submit">Register</button></a>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2023 DYPCET All rights reserved.</p>
+    </footer>
+</body>
+</html>
